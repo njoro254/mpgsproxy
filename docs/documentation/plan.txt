@@ -1,0 +1,53 @@
+Templates:
+
+auth:
+Sign up
+Log in
+Forgot password
+
+Home-General
+Home-auth
+Services
+About
+Contact us
+
+Dashboard- navbar
+Profile
+Notifications - suspicious - IP difference, milestones, odd timestamps, requests per second
+Reports - pdf display api - consumer/transactional milestones and summary
+Transaction history
+Downloads - api docs, reports
+
+
+
+
+
+Modules:
+Auth (token and verification)
+Mail notification
+Render template
+Download/Upload
+Mongo db - models, queries, CRUD
+Flask routing
+Cron jobs
+Pandas data(ATomicity and concurrency):
+	Method:
+		CRUD
+		ETL(Extraction, Tranformation, Loading)
+		SICCS (Source, Integration, Consolidation, Cleansing, Structuring:[Imports, Hierachial Indexing, Sorting, Summarization])
+	Logic:
+		Trend analysis
+		Reportings 
+		Forecasting
+		Visualization - matplotlib
+
+
+Blueprints:
+auth
+landing pages
+profile
+reports
+
+
+app admins have their own portal to edit profile, check notifications, download reports, and check logs
+applications can access endpoints using token and self signed json body

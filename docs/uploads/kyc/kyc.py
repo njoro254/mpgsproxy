@@ -1,0 +1,1 @@
+folder where admin know your customer uploads are stored

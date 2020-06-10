@@ -1,0 +1,84 @@
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ECH Payments Proxy</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/blog/">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Bootstrap core CSS -->
+<link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="blog.css" rel="stylesheet">
+  </head>
+
+
+
+<body>
+<div class='navbar'>
+            <div class='navbar__logo-div'>
+                <img class='navbar__logo-img' src='https://dynamic.brandcrowd.com/asset/logo/c1417721-e969-44c2-905f-34405ae67421/logo?v=4&text=ECH+Paymentstext=ECH%20Paymentstext=ECH%20Payments' alt="ECH Payments" />
+            </div>
+
+
+            <ul class='navbar__list'>
+                                {% if session.username %}
+                <li class="navbar__list-item">Welcome, <a href="{{ url_for('pagesMembers_app.memberspage_api') }}" class="navbar__list-link"> {{ session.username }} </a></li>
+                <li class="navbar__list-item"><a href="{{url_for('profile_app.MyProfile_api')}}" class="navbar__list-link">Profile</a></li>
+                <li class="navbar__list-item"><a href="{{url_for('pagesMembers_app.notifications_api')}}" class="navbar__list-link">Notifications</a></li>
+                <li class="navbar__list-item"><a href="{{url_for('pagesMembers_app.reports_api')}}" class="navbar__list-link">Reports</a></li>
+                <li class="navbar__list-item"><a href="{{url_for('pagesMembers_app.downloads_api')}}" target="_blank"  class="navbar__list-link">Downloads</a></li>
+                <li class="navbar__list-item"><a href="{{url_for('admin_app.logout_api')}}" class="navbar__list-link">Logout</a></li>
+
+
+                {% else %}
+
+                <li class="navbar__list-item"><a href="{{url_for('landingPages_app.home_api')}}" class="navbar__list-link">Home</a>
+                <li class="navbar__list-item"><a href="{{url_for('landingPages_app.services_api')}}" class="navbar__list-link">Services</a>
+                <li class="navbar__list-item"><a href="{{url_for('landingPages_app.about_api')}}" class="navbar__list-link">About</a>
+                <li class="navbar__list-item"><a href="{{url_for('landingPages_app.contactus_api')}}" class="navbar__list-link">Contact</a>
+                <li class="navbar__list-item"><a href="{{url_for('auth_app.newBusinessRegistration_api')}}" class="navbar__list-link">Sign Up</a></li>
+                <li class="navbar__list-item"><a href="{{url_for('admin_app.appAdminLogin_api')}}" class="navbar__list-link">Log in</a></li>
+                {% endif %}
+
+
+            </ul>
+        </div>
+
+{% block body %}
+{{message}}
+{% endblock %}
+<footer class="blog-footer">
+  <p>Welcome to your number one Online Payments Provider  <a href="https://emergingcapitalholdings.com/"> Join us today and watch your business grow!!</a></p>
+  <p>
+    <a href="#">Have any query? Speak to one of our customer care representatives</a>
+  </p>
+</footer>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="/assets/js/commons-be6a7afa.js"></script>
+
+</body>
+</html>

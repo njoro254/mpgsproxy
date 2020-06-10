@@ -1,0 +1,1 @@
+folder where admin passport photo uploads are stored
